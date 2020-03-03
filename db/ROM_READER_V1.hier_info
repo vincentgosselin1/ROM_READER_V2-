@@ -1,0 +1,136 @@
+|ROM_READER_V2
+TRIGGER_IN => DFF_inst.CLK
+CLK => READ_START.CLK
+CLK => EOP_OUT.CLK
+CLK => SOP_OUT.CLK
+CLK => counter_10bits:b2v_inst78.clock
+CLK => DFFE1.CLK
+RESET => SOP_OUT.OUTPUTSELECT
+RESET => counter_10bits:b2v_inst78.aclr
+RESET => READ_START.ACLR
+RESET => DFF_inst.IN1
+RESET => DFFE1.ACLR
+RESET => EOP_OUT.ENA
+READ_ENA <= DFFE1.DB_MAX_OUTPUT_PORT_TYPE
+ROM_ADDR[0] <= counter_10bits:b2v_inst78.q[0]
+ROM_ADDR[1] <= counter_10bits:b2v_inst78.q[1]
+ROM_ADDR[2] <= counter_10bits:b2v_inst78.q[2]
+ROM_ADDR[3] <= counter_10bits:b2v_inst78.q[3]
+ROM_ADDR[4] <= counter_10bits:b2v_inst78.q[4]
+ROM_ADDR[5] <= counter_10bits:b2v_inst78.q[5]
+ROM_ADDR[6] <= counter_10bits:b2v_inst78.q[6]
+ROM_ADDR[7] <= counter_10bits:b2v_inst78.q[7]
+ROM_ADDR[8] <= counter_10bits:b2v_inst78.q[8]
+ROM_ADDR[9] <= counter_10bits:b2v_inst78.q[9]
+SOP <= SOP_OUT.DB_MAX_OUTPUT_PORT_TYPE
+EOP <= EOP_OUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ROM_READER_V2|COUNTER_10BITS:b2v_inst78
+aclr => lpm_counter:LPM_COUNTER_component.aclr
+clock => lpm_counter:LPM_COUNTER_component.clock
+cnt_en => lpm_counter:LPM_COUNTER_component.cnt_en
+sclr => lpm_counter:LPM_COUNTER_component.sclr
+cout <= lpm_counter:LPM_COUNTER_component.cout
+q[0] <= lpm_counter:LPM_COUNTER_component.q[0]
+q[1] <= lpm_counter:LPM_COUNTER_component.q[1]
+q[2] <= lpm_counter:LPM_COUNTER_component.q[2]
+q[3] <= lpm_counter:LPM_COUNTER_component.q[3]
+q[4] <= lpm_counter:LPM_COUNTER_component.q[4]
+q[5] <= lpm_counter:LPM_COUNTER_component.q[5]
+q[6] <= lpm_counter:LPM_COUNTER_component.q[6]
+q[7] <= lpm_counter:LPM_COUNTER_component.q[7]
+q[8] <= lpm_counter:LPM_COUNTER_component.q[8]
+q[9] <= lpm_counter:LPM_COUNTER_component.q[9]
+
+
+|ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component
+clock => cntr_hjj:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_hjj:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => cntr_hjj:auto_generated.aclr
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => cntr_hjj:auto_generated.sclr
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_hjj:auto_generated.q[0]
+q[1] <= cntr_hjj:auto_generated.q[1]
+q[2] <= cntr_hjj:auto_generated.q[2]
+q[3] <= cntr_hjj:auto_generated.q[3]
+q[4] <= cntr_hjj:auto_generated.q[4]
+q[5] <= cntr_hjj:auto_generated.q[5]
+q[6] <= cntr_hjj:auto_generated.q[6]
+q[7] <= cntr_hjj:auto_generated.q[7]
+q[8] <= cntr_hjj:auto_generated.q[8]
+q[9] <= cntr_hjj:auto_generated.q[9]
+cout <= cntr_hjj:auto_generated.cout
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated
+aclr => counter_reg_bit[9].IN0
+clock => counter_reg_bit[9].CLK
+clock => counter_reg_bit[8].CLK
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+cnt_en => _.IN0
+cout <= cout_actual.DB_MAX_OUTPUT_PORT_TYPE
+q[0] <= counter_reg_bit[0].DB_MAX_OUTPUT_PORT_TYPE
+q[1] <= counter_reg_bit[1].DB_MAX_OUTPUT_PORT_TYPE
+q[2] <= counter_reg_bit[2].DB_MAX_OUTPUT_PORT_TYPE
+q[3] <= counter_reg_bit[3].DB_MAX_OUTPUT_PORT_TYPE
+q[4] <= counter_reg_bit[4].DB_MAX_OUTPUT_PORT_TYPE
+q[5] <= counter_reg_bit[5].DB_MAX_OUTPUT_PORT_TYPE
+q[6] <= counter_reg_bit[6].DB_MAX_OUTPUT_PORT_TYPE
+q[7] <= counter_reg_bit[7].DB_MAX_OUTPUT_PORT_TYPE
+q[8] <= counter_reg_bit[8].DB_MAX_OUTPUT_PORT_TYPE
+q[9] <= counter_reg_bit[9].DB_MAX_OUTPUT_PORT_TYPE
+sclr => _.IN1
+sclr => counter_reg_bit[9].SCLR
+sclr => counter_reg_bit[8].SCLR
+sclr => counter_reg_bit[7].SCLR
+sclr => counter_reg_bit[6].SCLR
+sclr => counter_reg_bit[5].SCLR
+sclr => counter_reg_bit[4].SCLR
+sclr => counter_reg_bit[3].SCLR
+sclr => counter_reg_bit[2].SCLR
+sclr => counter_reg_bit[1].SCLR
+sclr => counter_reg_bit[0].SCLR
+
+
