@@ -1,11 +1,11 @@
-Fitter Status : Successful - Tue Mar 03 18:06:54 2020
+Fitter Status : Successful - Sun Mar 08 10:55:13 2020
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : ROM_READER_V1
 Top-level Entity Name : ROM_READER_V2
 Family : Cyclone V
 Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Logic utilization (in ALMs) : 13 / 56,480 ( < 1 % )
+Logic utilization (in ALMs) : 12 / 56,480 ( < 1 % )
 Total registers : 19
 Total pins : 16 / 268 ( 6 % )
 Total virtual pins : 0

@@ -1,5 +1,5 @@
 Fitter report for ROM_READER_V1
-Tue Mar 03 18:06:54 2020
+Sun Mar 08 10:55:13 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -60,14 +60,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Fitter Summary                                                                ;
 +---------------------------------+---------------------------------------------+
-; Fitter Status                   ; Successful - Tue Mar 03 18:06:54 2020       ;
+; Fitter Status                   ; Successful - Sun Mar 08 10:55:13 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; ROM_READER_V1                               ;
 ; Top-level Entity Name           ; ROM_READER_V2                               ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC7C7F23C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 13 / 56,480 ( < 1 % )                       ;
+; Logic utilization (in ALMs)     ; 12 / 56,480 ( < 1 % )                       ;
 ; Total registers                 ; 19                                          ;
 ; Total pins                      ; 16 / 268 ( 6 % )                            ;
 ; Total virtual pins              ; 0                                           ;
@@ -155,9 +155,9 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.1%      ;
+;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.1%      ;
-;     Processor 4            ;   0.0%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
@@ -167,10 +167,10 @@ refer to the applicable agreement for further details.
 ; Node                                                                                                   ; Action     ; Operation                                         ; Reason                     ; Node Port ; Node Port Name ; Destination Node                                                                                                 ; Destination Port ; Destination Port Name ;
 +--------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 ; CLK~inputCLKENA0                                                                                       ; Created    ; Placement                                         ; Fitter Periphery Placement ;           ;                ;                                                                                                                  ;                  ;                       ;
+; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[0] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[0]~DUPLICATE ;                  ;                       ;
 ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3]~DUPLICATE ;                  ;                       ;
-; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[4] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[4]~DUPLICATE ;                  ;                       ;
 ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6]~DUPLICATE ;                  ;                       ;
-; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[7] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[7]~DUPLICATE ;                  ;                       ;
+; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[8] ; Duplicated ; Router Logic Cell Insertion and Logic Duplication ; Routability optimization   ;           ;                ; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[8]~DUPLICATE ;                  ;                       ;
 +--------------------------------------------------------------------------------------------------------+------------+---------------------------------------------------+----------------------------+-----------+----------------+------------------------------------------------------------------------------------------------------------------+------------------+-----------------------+
 
 
@@ -180,8 +180,8 @@ refer to the applicable agreement for further details.
 ; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+-------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 69 ) ; 0.00 % ( 0 / 69 )          ; 0.00 % ( 0 / 69 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 69 ) ; 0.00 % ( 0 / 69 )          ; 0.00 % ( 0 / 69 )        ;
+;     -- Requested    ; 0.00 % ( 0 / 70 ) ; 0.00 % ( 0 / 70 )          ; 0.00 % ( 0 / 70 )        ;
+;     -- Achieved     ; 0.00 % ( 0 / 70 ) ; 0.00 % ( 0 / 70 )          ; 0.00 % ( 0 / 70 )        ;
 ;                     ;                   ;                            ;                          ;
 ; Routing (by net)    ;                   ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -204,7 +204,7 @@ refer to the applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 69 )     ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 70 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 0 )      ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -220,12 +220,12 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 +-------------------------------------------------------------+--------------------+-------+
 ; Resource                                                    ; Usage              ; %     ;
 +-------------------------------------------------------------+--------------------+-------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 13 / 56,480        ; < 1 % ;
-; ALMs needed [=A-B+C]                                        ; 13                 ;       ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 14 / 56,480        ; < 1 % ;
-;         [a] ALMs used for LUT logic and registers           ; 7                  ;       ;
-;         [b] ALMs used for LUT logic                         ; 6                  ;       ;
-;         [c] ALMs used for registers                         ; 1                  ;       ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 12 / 56,480        ; < 1 % ;
+; ALMs needed [=A-B+C]                                        ; 12                 ;       ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 13 / 56,480        ; < 1 % ;
+;         [a] ALMs used for LUT logic and registers           ; 8                  ;       ;
+;         [b] ALMs used for LUT logic                         ; 5                  ;       ;
+;         [c] ALMs used for registers                         ; 0                  ;       ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                  ;       ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 56,480         ; < 1 % ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56,480         ; 0 %   ;
@@ -240,11 +240,11 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ;     -- Logic LABs                                           ; 3                  ;       ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                  ;       ;
 ;                                                             ;                    ;       ;
-; Combinational ALUT usage for logic                          ; 22                 ;       ;
+; Combinational ALUT usage for logic                          ; 23                 ;       ;
 ;     -- 7 input functions                                    ; 0                  ;       ;
-;     -- 6 input functions                                    ; 4                  ;       ;
-;     -- 5 input functions                                    ; 0                  ;       ;
-;     -- 4 input functions                                    ; 2                  ;       ;
+;     -- 6 input functions                                    ; 1                  ;       ;
+;     -- 5 input functions                                    ; 2                  ;       ;
+;     -- 4 input functions                                    ; 4                  ;       ;
 ;     -- <=3 input functions                                  ; 16                 ;       ;
 ; Combinational ALUT usage for route-throughs                 ; 0                  ;       ;
 ;                                                             ;                    ;       ;
@@ -290,9 +290,9 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; Hard Memory Controllers                                     ; 0 / 2              ; 0 %   ;
 ; Average interconnect usage (total/H/V)                      ; 0.0% / 0.0% / 0.0% ;       ;
 ; Peak interconnect usage (total/H/V)                         ; 0.1% / 0.1% / 0.2% ;       ;
-; Maximum fan-out                                             ; 19                 ;       ;
-; Highest non-global fan-out                                  ; 19                 ;       ;
-; Total fan-out                                               ; 172                ;       ;
+; Maximum fan-out                                             ; 20                 ;       ;
+; Highest non-global fan-out                                  ; 20                 ;       ;
+; Total fan-out                                               ; 174                ;       ;
 ; Average fan-out                                             ; 2.32               ;       ;
 +-------------------------------------------------------------+--------------------+-------+
 
@@ -302,12 +302,12 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 +-------------------------------------------------------------+-----------------------+--------------------------------+
 ; Statistic                                                   ; Top                   ; hard_block:auto_generated_inst ;
 +-------------------------------------------------------------+-----------------------+--------------------------------+
-; Logic utilization (ALMs needed / total ALMs on device)      ; 13 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
-; ALMs needed [=A-B+C]                                        ; 13                    ; 0                              ;
-;     [A] ALMs used in final placement [=a+b+c+d]             ; 14 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
-;         [a] ALMs used for LUT logic and registers           ; 7                     ; 0                              ;
-;         [b] ALMs used for LUT logic                         ; 6                     ; 0                              ;
-;         [c] ALMs used for registers                         ; 1                     ; 0                              ;
+; Logic utilization (ALMs needed / total ALMs on device)      ; 12 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
+; ALMs needed [=A-B+C]                                        ; 12                    ; 0                              ;
+;     [A] ALMs used in final placement [=a+b+c+d]             ; 13 / 56480 ( < 1 % )  ; 0 / 56480 ( 0 % )              ;
+;         [a] ALMs used for LUT logic and registers           ; 8                     ; 0                              ;
+;         [b] ALMs used for LUT logic                         ; 5                     ; 0                              ;
+;         [c] ALMs used for registers                         ; 0                     ; 0                              ;
 ;         [d] ALMs used for memory (up to half of total ALMs) ; 0                     ; 0                              ;
 ;     [B] Estimate of ALMs recoverable by dense packing       ; 1 / 56480 ( < 1 % )   ; 0 / 56480 ( 0 % )              ;
 ;     [C] Estimate of ALMs unavailable [=a+b+c+d]             ; 0 / 56480 ( 0 % )     ; 0 / 56480 ( 0 % )              ;
@@ -322,11 +322,11 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ;     -- Logic LABs                                           ; 3                     ; 0                              ;
 ;     -- Memory LABs (up to half of total LABs)               ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
-; Combinational ALUT usage for logic                          ; 22                    ; 0                              ;
+; Combinational ALUT usage for logic                          ; 23                    ; 0                              ;
 ;     -- 7 input functions                                    ; 0                     ; 0                              ;
-;     -- 6 input functions                                    ; 4                     ; 0                              ;
-;     -- 5 input functions                                    ; 0                     ; 0                              ;
-;     -- 4 input functions                                    ; 2                     ; 0                              ;
+;     -- 6 input functions                                    ; 1                     ; 0                              ;
+;     -- 5 input functions                                    ; 2                     ; 0                              ;
+;     -- 4 input functions                                    ; 4                     ; 0                              ;
 ;     -- <=3 input functions                                  ; 16                    ; 0                              ;
 ; Combinational ALUT usage for route-throughs                 ; 0                     ; 0                              ;
 ; Memory ALUT usage                                           ; 0                     ; 0                              ;
@@ -356,8 +356,8 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ;     -- Registered Output Connections                        ; 0                     ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; Internal Connections                                        ;                       ;                                ;
-;     -- Total Connections                                    ; 172                   ; 0                              ;
-;     -- Registered Connections                               ; 50                    ; 0                              ;
+;     -- Total Connections                                    ; 174                   ; 0                              ;
+;     -- Registered Connections                               ; 49                    ; 0                              ;
 ;                                                             ;                       ;                                ;
 ; External Connections                                        ;                       ;                                ;
 ;     -- Top                                                  ; 0                     ; 0                              ;
@@ -390,8 +390,8 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; Name       ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 ; CLK        ; M16   ; 5B       ; 89           ; 35           ; 60           ; 18                    ; 0                  ; yes    ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; RESET      ; K17   ; 5B       ; 89           ; 37           ; 3            ; 19                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; TRIGGER_IN ; N21   ; 5B       ; 89           ; 35           ; 94           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; RESET      ; N21   ; 5B       ; 89           ; 35           ; 94           ; 20                    ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
+; TRIGGER_IN ; N20   ; 5B       ; 89           ; 35           ; 77           ; 1                     ; 0                  ; no     ; no             ; no              ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
 +------------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
 
 
@@ -400,38 +400,38 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Output Buffer Delay ; Output Buffer Delay Control ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
-; EOP         ; L18   ; 5B       ; 89           ; 38           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; READ_ENA    ; L19   ; 5B       ; 89           ; 38           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[0] ; M20   ; 5B       ; 89           ; 37           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[1] ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[2] ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[3] ; M18   ; 5B       ; 89           ; 36           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[4] ; M21   ; 5B       ; 89           ; 37           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[5] ; L17   ; 5B       ; 89           ; 37           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[6] ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[7] ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[8] ; N20   ; 5B       ; 89           ; 35           ; 77           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; ROM_ADDR[9] ; K22   ; 5B       ; 89           ; 38           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
-; SOP         ; K21   ; 5B       ; 89           ; 38           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; EOP         ; M18   ; 5B       ; 89           ; 36           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; READ_ENA    ; N16   ; 5B       ; 89           ; 35           ; 43           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[0] ; M21   ; 5B       ; 89           ; 37           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[1] ; K22   ; 5B       ; 89           ; 38           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[2] ; L17   ; 5B       ; 89           ; 37           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[3] ; K17   ; 5B       ; 89           ; 37           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[4] ; M20   ; 5B       ; 89           ; 37           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[5] ; P19   ; 5A       ; 89           ; 9            ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[6] ; L18   ; 5B       ; 89           ; 38           ; 20           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[7] ; L22   ; 5B       ; 89           ; 36           ; 54           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[8] ; M22   ; 5B       ; 89           ; 36           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; ROM_ADDR[9] ; K21   ; 5B       ; 89           ; 38           ; 37           ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
+; SOP         ; N19   ; 5B       ; 89           ; 36           ; 3            ; no              ; no                     ; 1         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; 0                   ; Off                         ; Fitter               ; -                    ; -                   ;
 +-------------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+---------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+-----------------------------------------------------------------------------+
-; I/O Bank Usage                                                              ;
-+----------+-------------------+---------------+--------------+---------------+
-; I/O Bank ; Usage             ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
-+----------+-------------------+---------------+--------------+---------------+
-; B2L      ; 0 / 0 ( -- )      ; --            ; --           ; --            ;
-; B1L      ; 0 / 14 ( 0 % )    ; --            ; --           ; --            ;
-; B0L      ; 0 / 14 ( 0 % )    ; --            ; --           ; --            ;
-; 3A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 3B       ; 0 / 32 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 4A       ; 0 / 48 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 5A       ; 0 / 16 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 5B       ; 16 / 16 ( 100 % ) ; 2.5V          ; --           ; 2.5V          ;
-; 7A       ; 0 / 80 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-; 8A       ; 0 / 32 ( 0 % )    ; 2.5V          ; --           ; 2.5V          ;
-+----------+-------------------+---------------+--------------+---------------+
++----------------------------------------------------------------------------+
+; I/O Bank Usage                                                             ;
++----------+------------------+---------------+--------------+---------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ; VCCPD Voltage ;
++----------+------------------+---------------+--------------+---------------+
+; B2L      ; 0 / 0 ( -- )     ; --            ; --           ; --            ;
+; B1L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
+; B0L      ; 0 / 14 ( 0 % )   ; --            ; --           ; --            ;
+; 3A       ; 0 / 16 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 3B       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 4A       ; 0 / 48 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5A       ; 1 / 16 ( 6 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 5B       ; 15 / 16 ( 94 % ) ; 2.5V          ; --           ; 2.5V          ;
+; 7A       ; 0 / 80 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
+; 8A       ; 0 / 32 ( 0 % )   ; 2.5V          ; --           ; 2.5V          ;
++----------+------------------+---------------+--------------+---------------+
 
 
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -697,12 +697,12 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; K14      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; K15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; K16      ; 424        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K17      ; 284        ; 5B       ; RESET                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K17      ; 284        ; 5B       ; ROM_ADDR[3]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; K18      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; K19      ; 407        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
 ; K20      ; 405        ; 7A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Column I/O   ;                 ; no       ; On           ;
-; K21      ; 289        ; 5B       ; SOP                             ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; K22      ; 291        ; 5B       ; ROM_ADDR[9]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K21      ; 289        ; 5B       ; ROM_ADDR[9]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; K22      ; 291        ; 5B       ; ROM_ADDR[1]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; L1       ; 27         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L2       ; 26         ; B1L      ; GND                             ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -719,12 +719,12 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; L14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; L15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L16      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
-; L17      ; 286        ; 5B       ; ROM_ADDR[5]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; L18      ; 290        ; 5B       ; EOP                             ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; L19      ; 288        ; 5B       ; READ_ENA                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L17      ; 286        ; 5B       ; ROM_ADDR[2]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L18      ; 290        ; 5B       ; ROM_ADDR[6]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L19      ; 288        ; 5B       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; L20      ;            ; 5B       ; VREFB5BN0                       ; power  ;              ;                     ; --           ;                 ; --       ; --           ;
 ; L21      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; L22      ; 283        ; 5B       ; ROM_ADDR[1]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; L22      ; 283        ; 5B       ; ROM_ADDR[7]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; M3       ;            ; --       ; VCCH_GXBL                       ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
@@ -742,11 +742,11 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; M15      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; M16      ; 278        ; 5B       ; CLK                             ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M17      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M18      ; 282        ; 5B       ; ROM_ADDR[3]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M18      ; 282        ; 5B       ; EOP                             ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; M19      ;            ; 5B       ; VCCIO5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; M20      ; 285        ; 5B       ; ROM_ADDR[0]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; M21      ; 287        ; 5B       ; ROM_ADDR[4]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; M22      ; 281        ; 5B       ; ROM_ADDR[7]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M20      ; 285        ; 5B       ; ROM_ADDR[4]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M21      ; 287        ; 5B       ; ROM_ADDR[0]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; M22      ; 281        ; 5B       ; ROM_ADDR[8]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N1       ; 28         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N2       ; 29         ; B0L      ; GXB_NC                          ;        ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N3       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -762,12 +762,12 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; N13      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N14      ;            ; --       ; VCC                             ; power  ;              ; 1.1V                ; --           ;                 ; --       ; --           ;
 ; N15      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
-; N16      ; 276        ; 5B       ; ROM_ADDR[2]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N16      ; 276        ; 5B       ; READ_ENA                        ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N17      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; N18      ;            ; 5B       ; VCCPD5B                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
-; N19      ; 280        ; 5B       ; ROM_ADDR[6]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; N20      ; 277        ; 5B       ; ROM_ADDR[8]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
-; N21      ; 279        ; 5B       ; TRIGGER_IN                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N19      ; 280        ; 5B       ; SOP                             ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N20      ; 277        ; 5B       ; TRIGGER_IN                      ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
+; N21      ; 279        ; 5B       ; RESET                           ; input  ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; N22      ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P1       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
 ; P2       ;            ;          ; GND                             ; gnd    ;              ;                     ; --           ;                 ; --       ; --           ;
@@ -787,7 +787,7 @@ The pin-out file can be found in C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER
 ; P16      ; 225        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P17      ; 227        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
 ; P18      ; 226        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
-; P19      ; 224        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
+; P19      ; 224        ; 5A       ; ROM_ADDR[5]                     ; output ; 2.5 V        ;                     ; Row I/O      ; N               ; no       ; Off          ;
 ; P20      ;            ; 5A       ; VCCIO5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; P21      ;            ; 5A       ; VCCPD5A                         ; power  ;              ; 2.5V                ; --           ;                 ; --       ; --           ;
 ; P22      ; 222        ; 5A       ; RESERVED_INPUT_WITH_WEAK_PULLUP ;        ;              ;                     ; Row I/O      ;                 ; no       ; On           ;
@@ -972,10 +972,10 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------+--------------+
 ; Compilation Hierarchy Node                ; ALMs needed [=A-B+C] ; [A] ALMs used in final placement ; [B] Estimate of ALMs recoverable by dense packing ; [C] Estimate of ALMs unavailable ; ALMs used for memory ; Combinational ALUTs ; Dedicated Logic Registers ; I/O Registers ; Block Memory Bits ; M10Ks ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                ; Entity Name    ; Library Name ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------+--------------+
-; |ROM_READER_V2                            ; 12.5 (6.7)           ; 13.0 (7.2)                       ; 0.5 (0.5)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 22 (10)             ; 19 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 16   ; 0            ; |ROM_READER_V2                                                                                     ; ROM_READER_V2  ; work         ;
-;    |COUNTER_10BITS:b2v_inst78|            ; 5.8 (0.0)            ; 5.8 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 14 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78                                                           ; COUNTER_10BITS ; work         ;
-;       |lpm_counter:LPM_COUNTER_component| ; 5.8 (0.0)            ; 5.8 (0.0)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 14 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component                         ; lpm_counter    ; work         ;
-;          |cntr_hjj:auto_generated|        ; 5.8 (5.8)            ; 5.8 (5.8)                        ; 0.0 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated ; cntr_hjj       ; work         ;
+; |ROM_READER_V2                            ; 11.5 (5.8)           ; 12.0 (6.2)                       ; 0.5 (0.4)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 23 (11)             ; 19 (5)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 16   ; 0            ; |ROM_READER_V2                                                                                     ; ROM_READER_V2  ; work         ;
+;    |COUNTER_10BITS:b2v_inst78|            ; 5.8 (0.0)            ; 5.8 (0.0)                        ; 0.1 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 14 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78                                                           ; COUNTER_10BITS ; work         ;
+;       |lpm_counter:LPM_COUNTER_component| ; 5.8 (0.0)            ; 5.8 (0.0)                        ; 0.1 (0.0)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (0)              ; 14 (0)                    ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component                         ; lpm_counter    ; work         ;
+;          |cntr_hjj:auto_generated|        ; 5.8 (5.8)            ; 5.8 (5.8)                        ; 0.1 (0.1)                                         ; 0.0 (0.0)                        ; 0.0 (0.0)            ; 12 (12)             ; 14 (14)                   ; 0 (0)         ; 0                 ; 0     ; 0          ; 0    ; 0            ; |ROM_READER_V2|COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated ; cntr_hjj       ; work         ;
 +-------------------------------------------+----------------------+----------------------------------+---------------------------------------------------+----------------------------------+----------------------+---------------------+---------------------------+---------------+-------------------+-------+------------+------+--------------+----------------------------------------------------------------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -999,7 +999,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; SOP         ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; EOP         ; Output   ; -- ; --   ; --   ; -- ; (0)  ; (31)  ; --     ; --                     ; --                       ;
 ; CLK         ; Input    ; -- ; (0)  ; --   ; -- ; --   ; --    ; --     ; --                     ; --                       ;
-; RESET       ; Input    ; -- ; (0)  ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
+; RESET       ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 ; TRIGGER_IN  ; Input    ; -- ; --   ; (0)  ; -- ; --   ; --    ; --     ; --                     ; --                       ;
 +-------------+----------+----+------+------+----+------+-------+--------+------------------------+--------------------------+
 
@@ -1011,43 +1011,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 ; CLK                                                                                                                     ;                   ;         ;
 ; RESET                                                                                                                   ;                   ;         ;
-;      - READ_START                                                                                                       ; 0                 ; 0       ;
-;      - DFFE1                                                                                                            ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[9]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[8]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[7]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[5]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[4]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[2]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[1]           ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[0]           ; 0                 ; 0       ;
+;      - READ_START                                                                                                       ; 1                 ; 0       ;
+;      - DFFE1                                                                                                            ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[9]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[8]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[7]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[5]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[4]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[2]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[1]           ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[0]           ; 1                 ; 0       ;
 ;      - SOP_OUT~0                                                                                                        ; 1                 ; 0       ;
+;      - SOP_OUT~1                                                                                                        ; 1                 ; 0       ;
 ;      - EOP_OUT~0                                                                                                        ; 1                 ; 0       ;
 ;      - DFF_inst~0                                                                                                       ; 1                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3]~DUPLICATE ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[4]~DUPLICATE ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6]~DUPLICATE ; 0                 ; 0       ;
-;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[7]~DUPLICATE ; 0                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[0]~DUPLICATE ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[3]~DUPLICATE ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[6]~DUPLICATE ; 1                 ; 0       ;
+;      - COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_reg_bit[8]~DUPLICATE ; 1                 ; 0       ;
 ; TRIGGER_IN                                                                                                              ;                   ;         ;
 ;      - DFF_inst                                                                                                         ; 1                 ; 0       ;
 +-------------------------------------------------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                         ;
-+----------------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                     ; Location             ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+----------------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; CLK                                                                                                      ; PIN_M16              ; 18      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|_~0                  ; LABCELL_X88_Y37_N36  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_comb_bita9~1 ; LABCELL_X88_Y37_N30  ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; DFF_inst~0                                                                                               ; MLABCELL_X87_Y37_N51 ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; RESET                                                                                                    ; PIN_K17              ; 19      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; SYNTHESIZED_WIRE_2                                                                                       ; LABCELL_X88_Y37_N39  ; 1       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; TRIGGER_IN                                                                                               ; PIN_N21              ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-+----------------------------------------------------------------------------------------------------------+----------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                        ;
++----------------------------------------------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                     ; Location            ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++----------------------------------------------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLK                                                                                                      ; PIN_M16             ; 18      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|_~0                  ; LABCELL_X88_Y35_N0  ; 14      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; COUNTER_10BITS:b2v_inst78|lpm_counter:LPM_COUNTER_component|cntr_hjj:auto_generated|counter_comb_bita9~1 ; LABCELL_X88_Y36_N30 ; 16      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; DFF_inst~0                                                                                               ; LABCELL_X88_Y35_N36 ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; RESET                                                                                                    ; PIN_N21             ; 20      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; SOP_OUT~1                                                                                                ; LABCELL_X88_Y36_N54 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SYNTHESIZED_WIRE_2                                                                                       ; LABCELL_X88_Y35_N3  ; 1       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; TRIGGER_IN                                                                                               ; PIN_N20             ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
++----------------------------------------------------------------------------------------------------------+---------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------+
@@ -1064,22 +1066,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------+------------------------+
 ; Routing Resource Type        ; Usage                  ;
 +------------------------------+------------------------+
-; Block interconnects          ; 31 / 374,484 ( < 1 % ) ;
+; Block interconnects          ; 30 / 374,484 ( < 1 % ) ;
 ; C12 interconnects            ; 0 / 16,664 ( 0 % )     ;
 ; C2 interconnects             ; 9 / 155,012 ( < 1 % )  ;
-; C4 interconnects             ; 2 / 72,600 ( < 1 % )   ;
+; C4 interconnects             ; 8 / 72,600 ( < 1 % )   ;
 ; DQS bus muxes                ; 0 / 30 ( 0 % )         ;
 ; DQS-18 I/O buses             ; 0 / 30 ( 0 % )         ;
 ; DQS-9 I/O buses              ; 0 / 30 ( 0 % )         ;
-; Direct links                 ; 11 / 374,484 ( < 1 % ) ;
+; Direct links                 ; 7 / 374,484 ( < 1 % )  ;
 ; Global clocks                ; 1 / 16 ( 6 % )         ;
 ; Horizontal periphery clocks  ; 0 / 72 ( 0 % )         ;
-; Local interconnects          ; 7 / 112,960 ( < 1 % )  ;
+; Local interconnects          ; 13 / 112,960 ( < 1 % ) ;
 ; Quadrant clocks              ; 0 / 88 ( 0 % )         ;
 ; R14 interconnects            ; 0 / 15,868 ( 0 % )     ;
 ; R14/C12 interconnect drivers ; 0 / 27,256 ( 0 % )     ;
-; R3 interconnects             ; 9 / 169,296 ( < 1 % )  ;
-; R6 interconnects             ; 2 / 330,800 ( < 1 % )  ;
+; R3 interconnects             ; 8 / 169,296 ( < 1 % )  ;
+; R6 interconnects             ; 8 / 330,800 ( < 1 % )  ;
 ; Spine clocks                 ; 1 / 480 ( < 1 % )      ;
 ; Wire stub REs                ; 0 / 20,834 ( 0 % )     ;
 +------------------------------+------------------------+
@@ -1238,7 +1240,7 @@ Info (332111): Found 1 clocks
     Info (332111):    1.000          CLK
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
-Info (11798): Fitter preparation operations ending: elapsed time is 00:00:09
+Info (11798): Fitter preparation operations ending: elapsed time is 00:00:10
 Info (170189): Fitter placement preparation operations beginning
 Info (14951): The Fitter is using Advanced Physical Optimization.
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:01
@@ -1252,18 +1254,18 @@ Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
-Info (11888): Total time spent on timing analysis during the Fitter is 0.25 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.24 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:05
+Info (11801): Fitter post-fit operations ending: elapsed time is 00:00:04
 Info (144001): Generated suppressed messages file C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/output_files/ROM_READER_V1.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 6721 megabytes
-    Info: Processing ended: Tue Mar 03 18:06:54 2020
-    Info: Elapsed time: 00:00:34
-    Info: Total CPU time (on all processors): 00:01:02
+    Info: Peak virtual memory: 6672 megabytes
+    Info: Processing ended: Sun Mar 08 10:55:13 2020
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:01:05
 
 
 +----------------------------+
