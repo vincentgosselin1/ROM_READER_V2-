@@ -1,28 +1,11 @@
 -- Copyright (C) 2017  Intel Corporation. All rights reserved.
 -- Your use of Intel Corporation's design tools, logic functions 
 -- and other software and tools, and its AMPP partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
-
--- PROGRAM		"Quartus Prime"
--- VERSION		"Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
--- CREATED		"Tue Mar 03 10:06:27 2020"
+--ROM_READER_V2.vhd, by Vincent Gosselin, 2020.
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.numeric_std.ALL;  
-
--- Add the library and use clauses before the design unit declaration
-library altera; 
-use altera.altera_primitives_components.all;
 
 LIBRARY work;
 
@@ -44,14 +27,20 @@ ARCHITECTURE rtl OF ROM_READER_V2 IS
 
 SIGNAL	RESETn :  STD_LOGIC;
 SIGNAL	SOP_OUT : STD_LOGIC;	--WIRES
+SIGNAL	SOP_OUT_ff : STD_LOGIC;	--WIRES
 SIGNAL 	EOP_OUT	: STD_LOGIC; --WIRES
+SIGNAL 	EOP_OUT_ff	: STD_LOGIC; --WIRES
 SIGNAL	Q_OUT : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL	Q_OUT_ff : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL	COUNTER : NATURAL;
 signal	read_ena_out : std_logic;
 signal	dff1:	std_logic;
 signal	dff0: std_logic;
 signal	cnt_ena_ff: std_logic;
+signal	cnt_ena_ffd: std_logic;
 signal	cout : std_logic;
+SIGNAL	Q_OUTd : STD_LOGIC_VECTOR(9 DOWNTO 0);
+
 
 	
 
@@ -63,40 +52,59 @@ BEGIN
 		
 		Q_OUT <= std_logic_vector(to_unsigned(COUNTER, 10));
 		
-		SOP <= SOP_OUT;
-		EOP <= EOP_OUT;
-		
-		READ_ENA <= cnt_ena_ff;
-		ROM_ADDR <= Q_OUT;
 
+		SOP <= SOP_OUT_ff;
+		EOP <= EOP_OUT_ff;
+		
+		READ_ENA <= cnt_ena_ffd;
+		
+		ROM_ADDR <= Q_OUT_ff;
+	
+	--all outputs registered
+	process (CLK, RESET, Q_OUT, cnt_ena_ff, SOP_OUT, eop_out)
+	begin
+		if reset = '1' then
+			SOP_OUT_ff <= '0';
+			eop_out_ff <= '0';
+			cnt_ena_ffd <= '0';
+			q_out_ff <= "0000000000";
+		elsif (rising_edge(clk)) then
+			SOP_OUT_ff <= SOP_OUT;
+			eop_out_ff <= eop_out;
+			cnt_ena_ffd <= cnt_ena_ff;
+			q_out_ff <= q_out;
+		end if;
+	end process;
 		
 	
 		
 	--10bitcounter
 	process (CLK,RESET,cnt_ena_ff)
-		--really counts from 0 to 1023, 1024 is equal to 0. changed to 1024 because of modelsim.
 		variable cnt : natural range 0 to 1023 := 0;
 	begin
-				
-		if (rising_edge(clk)) then
-		
-				if (RESET = '1') then
+	
+		if (RESET = '1') then
 				-- Reset the counter to 0
 				cnt := 0;
-
-				elsif cnt_ena_ff = '1' then		
+				cout <= '0';
+		
 				
-				
-				--in modelsim, cnt goes beyond 1023 without this...
-					if cnt = 1023 then
-					cnt := 0;
-					else
-					-- Increment the counter if counting is enabled			   
-					cnt := cnt + 1;
-					end if;
+		elsif (rising_edge(clk)) then
+		
+					if cnt_ena_ff = '1' then	
 					
-				
-				end if;
+						--reset counter
+						if cnt = 1023 then
+							cnt := 0;
+						
+						
+						else	   
+							cnt := cnt + 1;
+							
+							
+						end if;
+						
+					end if;
 				
 		end if;
 
@@ -121,8 +129,6 @@ BEGIN
 		--Q_OUT <= std_logic_vector(to_unsigned(cnt, 10));
 	end process;
 
-	
-
 --TRIGGER_IN CAPTURE
 --dff0	
 	process(RESET, TRIGGER_IN, dff1)
@@ -135,7 +141,7 @@ begin
 end process;
 
 --dff1
-process (CLK)
+process (CLK,dff0)
 begin
 	if (rising_edge(CLK)) then
 		dff1 <= dff0;
@@ -147,12 +153,24 @@ process(CLK, dff1, cout, reset)
 begin
 	if(reset = '1') then
 		cnt_ena_ff <= '0';
-	elsif ((dff1 = '1') or (cout = '1')) then
-		if (rising_edge(CLK)) then
-			cnt_ena_ff <= dff1;
-		end if;
+	elsif (rising_edge(CLK)) then
+	
+			if ((dff1 = '1') or (cout = '1')) then
+				cnt_ena_ff <= dff1;
+			end if;
+			
 	end if;
 end process;
+----cnt_ena_ffd
+--process(clk,cnt_ena_ff, reset)
+--begin
+--	if reset '1' then
+--		cnt_ena_ffd <= '0';
+--	elsif(rising_edge(clk)) then
+--		cnt_ena_ffd <= cnt_ena_ff;
+--	end if;
+--end process;
+	
 
 	
 	

@@ -9,114 +9,106 @@ z2
 cModel Technology
 dC:/intelFPGA_lite/17.1
 Erom_reader_v2
-Z0 w1583896256
-Z1 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
-Z2 DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
-Z3 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
-Z4 DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
-Z5 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z8 dC:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2
-Z9 8C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd
-Z10 FC:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd
+Z0 w1583972737
+Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z4 dC:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2
+Z5 8C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd
+Z6 FC:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd
 l0
-L30
-V9OIfMVo>el@Q7[:mClIkX3
-!s100 `GT;zL7kFl>@R_nJFEUcE2
-Z11 OV;C;10.5b;63
+L13
+VX8LA`P>WZS`dYio?DBD3^1
+!s100 fhn<hR>5[Hh55N93^LLDa1
+Z7 OV;C;10.5b;63
 32
-Z12 !s110 1583896256
+Z8 !s110 1583972738
 !i10b 1
-Z13 !s108 1583896256.000000
-Z14 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd|
-Z15 !s107 C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd|
+Z9 !s108 1583972738.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd|
+Z11 !s107 C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\ROM_READER_V2.vhd|
 !i113 1
-Z16 o-work work -2002 -explicit
-Z17 tExplicit 1 CvgOpt 0
+Z12 o-work work -2002 -explicit
+Z13 tExplicit 1 CvgOpt 0
 Artl
 R1
 R2
 R3
-R4
-R5
-R6
+DEx4 work 13 rom_reader_v2 0 22 X8LA`P>WZS`dYio?DBD3^1
+l48
+L26
+VWX^`G37L1el6Pc0LAQ88U1
+!s100 c1RPhgFmLiXiX2A_Vf6h20
 R7
-Z18 DEx4 work 13 rom_reader_v2 0 22 9OIfMVo>el@Q7[:mClIkX3
-l59
-L43
-VMP20>6XWP>ZJ^EShzP6U^2
-!s100 g0k85X0gYLFaFWif4[Ui]0
-R11
 32
-R12
+R8
 !i10b 1
-R13
-R14
-R15
+R9
+R10
+R11
 !i113 1
-R16
-R17
+R12
+R13
 Abdf_type
+DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+DPx6 altera 11 dffeas_pack 0 22 ?bDUB9Db2N8iCCALNL;CT3
+DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+DPx6 altera 28 altera_primitives_components 0 22 c]VUMXSEi8Z`KM1bem<:B3
 R1
 R2
 R3
-R4
-R5
-R6
-R7
-R18
+DEx4 work 13 rom_reader_v2 0 22 9OIfMVo>el@Q7[:mClIkX3
 l67
 L43
 VDZj[@aJ2LzG=cDCj^F2==2
 !s100 D4BCRYVT[1__a=^HIAH<X0
-R11
+R7
 32
-Z19 !s110 1583895552
+!s110 1583895552
 !i10b 1
-Z20 !s108 1583895552.000000
-R14
-R15
+!s108 1583895552.000000
+R10
+R11
 !i113 1
-R16
-R17
+R12
+R13
 w1583895518
 Erom_reader_v2_vhd_tst
-Z21 w1583895552
-R6
-R7
-R8
-Z22 8C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\simulation\modelsim\ROM_READER_V2.vht
-Z23 FC:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\simulation\modelsim\ROM_READER_V2.vht
+Z14 w1583895552
+R2
+R3
+R4
+Z15 8C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/simulation/modelsim/ROM_READER_V2.vht
+Z16 FC:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/simulation/modelsim/ROM_READER_V2.vht
 l0
 L30
 VINWZ6Nl5gGPYkUbR:H<1o3
 !s100 QhT>SDg7?VR<4F[gzg]Z;3
-R11
-32
-R12
-!i10b 1
-R13
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\simulation\modelsim\ROM_READER_V2.vht|
-Z25 !s107 C:\intelFPGA_lite\17.1\quartus\MyDev\ROM_READER_V2\simulation\modelsim\ROM_READER_V2.vht|
-!i113 1
-R16
-R17
-Arom_reader_v2_arch
-R6
 R7
-Z26 DEx4 work 21 rom_reader_v2_vhd_tst 0 22 INWZ6Nl5gGPYkUbR:H<1o3
+32
+R8
+!i10b 1
+R9
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/simulation/modelsim/ROM_READER_V2.vht|
+Z18 !s107 C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/simulation/modelsim/ROM_READER_V2.vht|
+!i113 1
+R12
+R13
+Arom_reader_v2_arch
+R2
+R3
+Z19 DEx4 work 21 rom_reader_v2_vhd_tst 0 22 INWZ6Nl5gGPYkUbR:H<1o3
 l53
 L32
-Z27 Vd;Ni523ML1PGNoTK<F14F2
-Z28 !s100 UnIK8=[]6:WBYkKc[Sh;i1
-R11
+Z20 Vd;Ni523ML1PGNoTK<F14F2
+Z21 !s100 UnIK8=[]6:WBYkKc[Sh;i1
+R7
 32
-R12
+R8
 !i10b 1
-R13
-R24
-R25
-!i113 1
-R16
+R9
 R17
+R18
+!i113 1
+R12
+R13
