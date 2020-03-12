@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ROM_READER_V1
-Wed Mar 11 20:25:28 2020
+Wed Mar 11 20:36:26 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 11 20:25:28 2020       ;
+; Analysis & Synthesis Status     ; Successful - Wed Mar 11 20:36:26 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; ROM_READER_V1                               ;
 ; Top-level Entity Name           ; ROM_READER_V2                               ;
@@ -265,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 11 20:25:15 2020
+    Info: Processing started: Wed Mar 11 20:36:14 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ROM_READER_V2 -c ROM_READER_V1
 Warning (125092): Tcl Script File COUNTER_10BITS/COUNTER_10BITS.qip not found
     Info (125063): set_global_assignment -name QIP_FILE COUNTER_10BITS/COUNTER_10BITS.qip
@@ -275,7 +275,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file rom_rea
     Info (12022): Found design unit 1: ROM_READER_V2-rtl File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 26
     Info (12023): Found entity 1: ROM_READER_V2 File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 13
 Info (12127): Elaborating entity "ROM_READER_V2" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at ROM_READER_V2.vhd(28): object "RESETn" assigned a value but never read File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 28
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -283,10 +282,10 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 32 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
     Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Wed Mar 11 20:25:28 2020
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Processing ended: Wed Mar 11 20:36:26 2020
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:26
 
 

@@ -1,7 +1,7 @@
--- Copyright (C) 2017  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
 --ROM_READER_V2.vhd, by Vincent Gosselin, 2020.
+--module to read the content of ROM component.
+-- currently reads 1024 memory addresses.
+-- Indication of first packet and last packet.
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
@@ -19,13 +19,12 @@ ENTITY ROM_READER_V2 IS
 		READ_ENA :  OUT  STD_LOGIC;
 		ROM_ADDR :  OUT  STD_LOGIC_VECTOR(9 DOWNTO 0);
 		SOP	: OUT STD_LOGIC; --FIRST SAMPLE OUT
-		EOP	:	OUT STD_LOGIC --SECONDS SAMPLE OUT
+		EOP	:	OUT STD_LOGIC --last SAMPLE OUT
 	);
 END ROM_READER_V2;
 
 ARCHITECTURE rtl OF ROM_READER_V2 IS 
 
-SIGNAL	RESETn :  STD_LOGIC;
 SIGNAL	SOP_OUT : STD_LOGIC;	--WIRES
 SIGNAL	SOP_OUT_ff : STD_LOGIC;	--WIRES
 SIGNAL 	EOP_OUT	: STD_LOGIC; --WIRES
@@ -125,8 +124,7 @@ BEGIN
 			EOP_OUT <= '0';
 			cout <= '0';
 		end if;
-		
-		--Q_OUT <= std_logic_vector(to_unsigned(cnt, 10));
+
 	end process;
 
 --TRIGGER_IN CAPTURE
@@ -161,19 +159,5 @@ begin
 			
 	end if;
 end process;
-----cnt_ena_ffd
---process(clk,cnt_ena_ff, reset)
---begin
---	if reset '1' then
---		cnt_ena_ffd <= '0';
---	elsif(rising_edge(clk)) then
---		cnt_ena_ffd <= cnt_ena_ff;
---	end if;
---end process;
-	
-
-	
-	
-RESETn <= NOT(RESET);	
 
 END rtl;
