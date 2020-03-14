@@ -39,6 +39,7 @@ signal	cnt_ena_ff: std_logic;
 signal	cnt_ena_ffd: std_logic;
 signal	cout : std_logic;
 SIGNAL	Q_OUTd : STD_LOGIC_VECTOR(9 DOWNTO 0);
+signal	trigger_in_sync : std_logic;
 
 
 	
@@ -128,15 +129,28 @@ BEGIN
 	end process;
 
 --TRIGGER_IN CAPTURE
+--trigger_in_sync
+	process(RESET, TRIGGER_IN, clk)
+	begin
+		if reset = '1' then
+			trigger_in_sync <= '0';
+		elsif rising_edge(clk) then
+			trigger_in_sync <= trigger_in;
+		end if;
+	end process;
+
+
 --dff0	
-	process(RESET, TRIGGER_IN, dff1)
+	process(RESET, TRIGGER_IN_sync, dff1)
 begin
 	if((RESET = '1') or (dff1 = '1')) then
 		dff0 <= '0';
-	elsif (rising_edge(TRIGGER_IN)) then
+	elsif (rising_edge(TRIGGER_IN_sync)) then
 		dff0 <= '1';
 	end if;
 end process;
+
+
 
 --dff1
 process (CLK,dff0)
@@ -159,5 +173,7 @@ begin
 			
 	end if;
 end process;
+
+
 
 END rtl;
