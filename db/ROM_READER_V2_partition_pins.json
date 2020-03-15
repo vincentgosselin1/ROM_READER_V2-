@@ -1,0 +1,73 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "READ_ENA",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ROM_ADDR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SOP",
+					"strict" : false
+				},
+				{
+					"name" : "EOP",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "TRIGGER_IN",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ROM_READER_V1
-Wed Mar 11 20:36:26 2020
+Sat Mar 14 13:31:39 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Mar 11 20:36:26 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Mar 14 13:31:39 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; ROM_READER_V1                               ;
 ; Top-level Entity Name           ; ROM_READER_V2                               ;
@@ -265,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Wed Mar 11 20:36:14 2020
+    Info: Processing started: Sat Mar 14 13:31:27 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ROM_READER_V2 -c ROM_READER_V1
 Warning (125092): Tcl Script File COUNTER_10BITS/COUNTER_10BITS.qip not found
     Info (125063): set_global_assignment -name QIP_FILE COUNTER_10BITS/COUNTER_10BITS.qip
@@ -283,8 +283,8 @@ Info (21057): Implemented 48 device resources after synthesis - the final resour
     Info (21059): Implemented 13 output pins
     Info (21061): Implemented 32 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4852 megabytes
-    Info: Processing ended: Wed Mar 11 20:36:26 2020
+    Info: Peak virtual memory: 4857 megabytes
+    Info: Processing ended: Sat Mar 14 13:31:39 2020
     Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:26
 

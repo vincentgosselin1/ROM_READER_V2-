@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus Prime"
 -- VERSION "Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition"
 
--- DATE "03/08/2020 10:55:35"
+-- DATE "03/14/2020 13:32:36"
 
 -- 
 -- Device: Altera 5CGXFC7C7F23C8 Package FBGA484
@@ -48,22 +48,22 @@ ENTITY 	ROM_READER_V2 IS
 END ROM_READER_V2;
 
 -- Design Ports Information
--- READ_ENA	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[0]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[1]	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[2]	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[3]	=>  Location: PIN_K17,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[4]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[5]	=>  Location: PIN_P19,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[6]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[7]	=>  Location: PIN_L22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[8]	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- ROM_ADDR[9]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- SOP	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- EOP	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- READ_ENA	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[0]	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[1]	=>  Location: PIN_K21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[2]	=>  Location: PIN_N19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[3]	=>  Location: PIN_L18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[4]	=>  Location: PIN_M21,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[5]	=>  Location: PIN_M18,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[6]	=>  Location: PIN_M20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[7]	=>  Location: PIN_K17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[8]	=>  Location: PIN_L19,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- ROM_ADDR[9]	=>  Location: PIN_K22,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- SOP	=>  Location: PIN_N16,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- EOP	=>  Location: PIN_M22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 -- CLK	=>  Location: PIN_M16,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- RESET	=>  Location: PIN_N21,	 I/O Standard: 2.5 V,	 Current Strength: Default
--- TRIGGER_IN	=>  Location: PIN_N20,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- RESET	=>  Location: PIN_L17,	 I/O Standard: 2.5 V,	 Current Strength: Default
+-- TRIGGER_IN	=>  Location: PIN_L22,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 ARCHITECTURE structure OF ROM_READER_V2 IS
@@ -86,63 +86,64 @@ SIGNAL ww_EOP : std_logic;
 SIGNAL \~QUARTUS_CREATED_GND~I_combout\ : std_logic;
 SIGNAL \CLK~input_o\ : std_logic;
 SIGNAL \CLK~inputCLKENA0_outclk\ : std_logic;
-SIGNAL \TRIGGER_IN~input_o\ : std_logic;
-SIGNAL \DFF_inst~feeder_combout\ : std_logic;
+SIGNAL \Add0~1_sumout\ : std_logic;
 SIGNAL \RESET~input_o\ : std_logic;
-SIGNAL \DFF_inst~0_combout\ : std_logic;
-SIGNAL \DFF_inst~q\ : std_logic;
-SIGNAL \READ_START~q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\ : std_logic;
-SIGNAL \SYNTHESIZED_WIRE_2~combout\ : std_logic;
-SIGNAL \DFFE1~q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[3]~DUPLICATE_q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE_q\ : std_logic;
-SIGNAL \Equal0~1_combout\ : std_logic;
-SIGNAL \Equal0~0_combout\ : std_logic;
-SIGNAL \SOP_OUT~0_combout\ : std_logic;
-SIGNAL \Equal1~1_combout\ : std_logic;
 SIGNAL \Equal1~0_combout\ : std_logic;
+SIGNAL \Equal1~2_combout\ : std_logic;
+SIGNAL \Add0~2\ : std_logic;
+SIGNAL \Add0~5_sumout\ : std_logic;
+SIGNAL \Add0~6\ : std_logic;
+SIGNAL \Add0~9_sumout\ : std_logic;
+SIGNAL \Add0~10\ : std_logic;
+SIGNAL \Add0~13_sumout\ : std_logic;
+SIGNAL \Add0~14\ : std_logic;
+SIGNAL \Add0~17_sumout\ : std_logic;
+SIGNAL \Add0~18\ : std_logic;
+SIGNAL \Add0~21_sumout\ : std_logic;
+SIGNAL \Add0~22\ : std_logic;
+SIGNAL \Add0~25_sumout\ : std_logic;
+SIGNAL \Add0~26\ : std_logic;
+SIGNAL \Add0~29_sumout\ : std_logic;
+SIGNAL \Add0~30\ : std_logic;
+SIGNAL \Add0~33_sumout\ : std_logic;
+SIGNAL \Add0~34\ : std_logic;
+SIGNAL \Add0~37_sumout\ : std_logic;
+SIGNAL \Equal1~1_combout\ : std_logic;
+SIGNAL \TRIGGER_IN~input_o\ : std_logic;
+SIGNAL \dff0~feeder_combout\ : std_logic;
+SIGNAL \process_2~0_combout\ : std_logic;
+SIGNAL \dff0~q\ : std_logic;
+SIGNAL \dff1~q\ : std_logic;
+SIGNAL \cnt_ena_ff~0_combout\ : std_logic;
+SIGNAL \cnt_ena_ff~q\ : std_logic;
+SIGNAL \cnt_ena_ffd~feeder_combout\ : std_logic;
+SIGNAL \cnt_ena_ffd~q\ : std_logic;
+SIGNAL \cnt[1]~DUPLICATE_q\ : std_logic;
+SIGNAL \Q_OUT_ff[1]~feeder_combout\ : std_logic;
+SIGNAL \cnt[2]~DUPLICATE_q\ : std_logic;
+SIGNAL \Q_OUT_ff[3]~feeder_combout\ : std_logic;
+SIGNAL \Q_OUT_ff[5]~feeder_combout\ : std_logic;
+SIGNAL \Q_OUT_ff[6]~feeder_combout\ : std_logic;
+SIGNAL \cnt[7]~DUPLICATE_q\ : std_logic;
+SIGNAL \Q_OUT_ff[8]~feeder_combout\ : std_logic;
 SIGNAL \SOP_OUT~1_combout\ : std_logic;
-SIGNAL \SOP_OUT~q\ : std_logic;
-SIGNAL \EOP_OUT~0_combout\ : std_logic;
-SIGNAL \EOP_OUT~q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\ : std_logic_vector(9 DOWNTO 0);
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[8]~DUPLICATE_q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[6]~DUPLICATE_q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[0]~DUPLICATE_q\ : std_logic;
+SIGNAL \SOP_OUT~0_combout\ : std_logic;
+SIGNAL \SOP_OUT~combout\ : std_logic;
+SIGNAL \SOP_OUT_ff~q\ : std_logic;
+SIGNAL \EOP_OUT~combout\ : std_logic;
+SIGNAL \EOP_OUT_ff~q\ : std_logic;
+SIGNAL cnt : std_logic_vector(9 DOWNTO 0);
+SIGNAL Q_OUT_ff : std_logic_vector(9 DOWNTO 0);
+SIGNAL \ALT_INV_cnt[1]~DUPLICATE_q\ : std_logic;
 SIGNAL \ALT_INV_RESET~input_o\ : std_logic;
-SIGNAL \ALT_INV_DFF_inst~0_combout\ : std_logic;
+SIGNAL \ALT_INV_process_2~0_combout\ : std_logic;
+SIGNAL \ALT_INV_dff1~q\ : std_logic;
 SIGNAL \ALT_INV_Equal1~1_combout\ : std_logic;
 SIGNAL \ALT_INV_Equal1~0_combout\ : std_logic;
-SIGNAL \ALT_INV_Equal0~1_combout\ : std_logic;
-SIGNAL \ALT_INV_Equal0~0_combout\ : std_logic;
-SIGNAL \ALT_INV_READ_START~q\ : std_logic;
-SIGNAL \ALT_INV_DFFE1~q\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_comb_bita9~1_sumout\ : std_logic;
-SIGNAL \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\ : std_logic_vector(9 DOWNTO 1);
+SIGNAL \ALT_INV_SOP_OUT~1_combout\ : std_logic;
+SIGNAL \ALT_INV_SOP_OUT~0_combout\ : std_logic;
+SIGNAL \ALT_INV_cnt_ena_ff~q\ : std_logic;
+SIGNAL ALT_INV_cnt : std_logic_vector(9 DOWNTO 0);
 
 BEGIN
 
@@ -156,29 +157,27 @@ EOP <= ww_EOP;
 ww_devoe <= devoe;
 ww_devclrn <= devclrn;
 ww_devpor <= devpor;
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[8]~DUPLICATE_q\ <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\;
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[6]~DUPLICATE_q\ <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE_q\;
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[0]~DUPLICATE_q\ <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\;
+\ALT_INV_cnt[1]~DUPLICATE_q\ <= NOT \cnt[1]~DUPLICATE_q\;
 \ALT_INV_RESET~input_o\ <= NOT \RESET~input_o\;
-\ALT_INV_DFF_inst~0_combout\ <= NOT \DFF_inst~0_combout\;
+\ALT_INV_process_2~0_combout\ <= NOT \process_2~0_combout\;
+\ALT_INV_dff1~q\ <= NOT \dff1~q\;
 \ALT_INV_Equal1~1_combout\ <= NOT \Equal1~1_combout\;
 \ALT_INV_Equal1~0_combout\ <= NOT \Equal1~0_combout\;
-\ALT_INV_Equal0~1_combout\ <= NOT \Equal0~1_combout\;
-\ALT_INV_Equal0~0_combout\ <= NOT \Equal0~0_combout\;
-\ALT_INV_READ_START~q\ <= NOT \READ_START~q\;
-\ALT_INV_DFFE1~q\ <= NOT \DFFE1~q\;
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_comb_bita9~1_sumout\ <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\;
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(9) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(8) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(8);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(7) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(6) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(6);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(5) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(4) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(3) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(2) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2);
-\b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(1) <= NOT \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1);
+\ALT_INV_SOP_OUT~1_combout\ <= NOT \SOP_OUT~1_combout\;
+\ALT_INV_SOP_OUT~0_combout\ <= NOT \SOP_OUT~0_combout\;
+\ALT_INV_cnt_ena_ff~q\ <= NOT \cnt_ena_ff~q\;
+ALT_INV_cnt(9) <= NOT cnt(9);
+ALT_INV_cnt(8) <= NOT cnt(8);
+ALT_INV_cnt(7) <= NOT cnt(7);
+ALT_INV_cnt(6) <= NOT cnt(6);
+ALT_INV_cnt(5) <= NOT cnt(5);
+ALT_INV_cnt(4) <= NOT cnt(4);
+ALT_INV_cnt(3) <= NOT cnt(3);
+ALT_INV_cnt(2) <= NOT cnt(2);
+ALT_INV_cnt(1) <= NOT cnt(1);
+ALT_INV_cnt(0) <= NOT cnt(0);
 
--- Location: IOOBUF_X89_Y35_N45
+-- Location: IOOBUF_X89_Y35_N79
 \READ_ENA~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -187,11 +186,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \DFFE1~q\,
+	i => \cnt_ena_ffd~q\,
 	devoe => ww_devoe,
 	o => ww_READ_ENA);
 
--- Location: IOOBUF_X89_Y37_N56
+-- Location: IOOBUF_X89_Y35_N96
 \ROM_ADDR[0]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -200,11 +199,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(0),
+	i => Q_OUT_ff(0),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(0));
 
--- Location: IOOBUF_X89_Y38_N56
+-- Location: IOOBUF_X89_Y38_N39
 \ROM_ADDR[1]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -213,11 +212,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1),
+	i => Q_OUT_ff(1),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(1));
 
--- Location: IOOBUF_X89_Y37_N22
+-- Location: IOOBUF_X89_Y36_N5
 \ROM_ADDR[2]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -226,11 +225,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2),
+	i => Q_OUT_ff(2),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(2));
 
--- Location: IOOBUF_X89_Y37_N5
+-- Location: IOOBUF_X89_Y38_N22
 \ROM_ADDR[3]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -239,11 +238,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[3]~DUPLICATE_q\,
+	i => Q_OUT_ff(3),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(3));
 
--- Location: IOOBUF_X89_Y37_N39
+-- Location: IOOBUF_X89_Y37_N56
 \ROM_ADDR[4]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -252,11 +251,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4),
+	i => Q_OUT_ff(4),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(4));
 
--- Location: IOOBUF_X89_Y9_N39
+-- Location: IOOBUF_X89_Y36_N22
 \ROM_ADDR[5]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -265,11 +264,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5),
+	i => Q_OUT_ff(5),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(5));
 
--- Location: IOOBUF_X89_Y38_N22
+-- Location: IOOBUF_X89_Y37_N39
 \ROM_ADDR[6]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -278,11 +277,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE_q\,
+	i => Q_OUT_ff(6),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(6));
 
--- Location: IOOBUF_X89_Y36_N56
+-- Location: IOOBUF_X89_Y37_N5
 \ROM_ADDR[7]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -291,11 +290,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7),
+	i => Q_OUT_ff(7),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(7));
 
--- Location: IOOBUF_X89_Y36_N39
+-- Location: IOOBUF_X89_Y38_N5
 \ROM_ADDR[8]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -304,11 +303,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\,
+	i => Q_OUT_ff(8),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(8));
 
--- Location: IOOBUF_X89_Y38_N39
+-- Location: IOOBUF_X89_Y38_N56
 \ROM_ADDR[9]~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -317,11 +316,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9),
+	i => Q_OUT_ff(9),
 	devoe => ww_devoe,
 	o => ww_ROM_ADDR(9));
 
--- Location: IOOBUF_X89_Y36_N5
+-- Location: IOOBUF_X89_Y35_N45
 \SOP~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -330,11 +329,11 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \SOP_OUT~q\,
+	i => \SOP_OUT_ff~q\,
 	devoe => ww_devoe,
 	o => ww_SOP);
 
--- Location: IOOBUF_X89_Y36_N22
+-- Location: IOOBUF_X89_Y36_N39
 \EOP~output\ : cyclonev_io_obuf
 -- pragma translate_off
 GENERIC MAP (
@@ -343,7 +342,7 @@ GENERIC MAP (
 	shift_series_termination_control => "false")
 -- pragma translate_on
 PORT MAP (
-	i => \EOP_OUT~q\,
+	i => \EOP_OUT_ff~q\,
 	devoe => ww_devoe,
 	o => ww_EOP);
 
@@ -372,32 +371,25 @@ PORT MAP (
 	inclk => \CLK~input_o\,
 	outclk => \CLK~inputCLKENA0_outclk\);
 
--- Location: IOIBUF_X89_Y35_N78
-\TRIGGER_IN~input\ : cyclonev_io_ibuf
--- pragma translate_off
-GENERIC MAP (
-	bus_hold => "false",
-	simulate_z_as => "z")
--- pragma translate_on
-PORT MAP (
-	i => ww_TRIGGER_IN,
-	o => \TRIGGER_IN~input_o\);
-
--- Location: LABCELL_X88_Y35_N42
-\DFF_inst~feeder\ : cyclonev_lcell_comb
+-- Location: MLABCELL_X87_Y34_N0
+\Add0~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \DFF_inst~feeder_combout\ = VCC
+-- \Add0~1_sumout\ = SUM(( cnt(0) ) + ( VCC ) + ( !VCC ))
+-- \Add0~2\ = CARRY(( cnt(0) ) + ( VCC ) + ( !VCC ))
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1111111111111111111111111111111111111111111111111111111111111111",
+	lut_mask => "0000000000000000000000000000000000000000000000000000000011111111",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	combout => \DFF_inst~feeder_combout\);
+	datad => ALT_INV_cnt(0),
+	cin => GND,
+	sumout => \Add0~1_sumout\,
+	cout => \Add0~2\);
 
--- Location: IOIBUF_X89_Y35_N95
+-- Location: IOIBUF_X89_Y37_N21
 \RESET~input\ : cyclonev_io_ibuf
 -- pragma translate_off
 GENERIC MAP (
@@ -408,618 +400,10 @@ PORT MAP (
 	i => ww_RESET,
 	o => \RESET~input_o\);
 
--- Location: LABCELL_X88_Y35_N36
-\DFF_inst~0\ : cyclonev_lcell_comb
--- Equation(s):
--- \DFF_inst~0_combout\ = ( \READ_START~q\ ) # ( !\READ_START~q\ & ( \RESET~input_o\ ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000111100001111111111111111111100001111000011111111111111111111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \ALT_INV_RESET~input_o\,
-	datae => \ALT_INV_READ_START~q\,
-	combout => \DFF_inst~0_combout\);
-
--- Location: FF_X88_Y35_N44
-DFF_inst : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \TRIGGER_IN~input_o\,
-	d => \DFF_inst~feeder_combout\,
-	clrn => \ALT_INV_DFF_inst~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \DFF_inst~q\);
-
--- Location: FF_X88_Y35_N38
-READ_START : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	asdata => \DFF_inst~q\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \READ_START~q\);
-
--- Location: LABCELL_X88_Y36_N0
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\ ) + ( VCC ) + ( !VCC ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\ ) + ( VCC ) + ( !VCC ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000000000000000000000000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[0]~DUPLICATE_q\,
-	cin => GND,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\);
-
--- Location: LABCELL_X88_Y35_N0
-\b2v_inst78|LPM_COUNTER_component|auto_generated|_~0\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\ = (\DFFE1~q\) # (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\)
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0011001111111111001100111111111100110011111111110011001111111111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_comb_bita9~1_sumout\,
-	datad => \ALT_INV_DFFE1~q\,
-	combout => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\);
-
--- Location: FF_X88_Y36_N1
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\);
-
--- Location: LABCELL_X88_Y36_N3
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(1),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\);
-
--- Location: FF_X88_Y36_N4
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[1]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1));
-
--- Location: LABCELL_X88_Y36_N6
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(2),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita1~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\);
-
--- Location: FF_X88_Y36_N7
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[2]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2));
-
--- Location: LABCELL_X88_Y36_N9
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(3),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita2~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\);
-
--- Location: FF_X88_Y36_N11
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[3]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3));
-
--- Location: LABCELL_X88_Y36_N12
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(4),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\);
-
--- Location: FF_X88_Y36_N13
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[4]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4));
-
--- Location: LABCELL_X88_Y36_N15
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(5),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita4~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\);
-
--- Location: FF_X88_Y36_N17
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[5]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5));
-
--- Location: LABCELL_X88_Y36_N18
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(6) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(6) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(6),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita5~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\);
-
--- Location: FF_X88_Y36_N20
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(6));
-
--- Location: LABCELL_X88_Y36_N21
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(7),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\);
-
--- Location: FF_X88_Y36_N22
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[7]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7));
-
--- Location: LABCELL_X88_Y36_N24
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\ ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\ 
--- ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\ ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\ 
--- ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000011001100110011",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[8]~DUPLICATE_q\,
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita7~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\);
-
--- Location: FF_X88_Y36_N25
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]~DUPLICATE_q\);
-
--- Location: LABCELL_X88_Y36_N27
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout\ = SUM(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\ ))
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT\ = CARRY(( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9) ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000111100001111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(9),
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout\,
-	cout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT\);
-
--- Location: FF_X88_Y36_N28
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[9]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9));
-
--- Location: LABCELL_X88_Y36_N30
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1\ : cyclonev_lcell_comb
--- Equation(s):
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\ = SUM(( GND ) + ( GND ) + ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT\ ))
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000111111111111111100000000000000000000000000000000",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	cin => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~COUT\,
-	sumout => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\);
-
--- Location: LABCELL_X88_Y35_N3
-SYNTHESIZED_WIRE_2 : cyclonev_lcell_comb
--- Equation(s):
--- \SYNTHESIZED_WIRE_2~combout\ = (\READ_START~q\) # (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\)
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0011001111111111001100111111111100110011111111110011001111111111",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_comb_bita9~1_sumout\,
-	datad => \ALT_INV_READ_START~q\,
-	combout => \SYNTHESIZED_WIRE_2~combout\);
-
--- Location: FF_X88_Y35_N1
-DFFE1 : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	asdata => \READ_START~q\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sload => VCC,
-	ena => \SYNTHESIZED_WIRE_2~combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \DFFE1~q\);
-
--- Location: FF_X88_Y36_N2
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita0~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(0));
-
--- Location: FF_X88_Y36_N10
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[3]~DUPLICATE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita3~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[3]~DUPLICATE_q\);
-
--- Location: FF_X88_Y36_N19
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita6~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE_q\);
-
--- Location: LABCELL_X88_Y36_N51
-\Equal0~1\ : cyclonev_lcell_comb
--- Equation(s):
--- \Equal0~1_combout\ = ( !\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3) & ( (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\ & (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1) & 
--- !\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2))) ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "1000100000000000100010000000000000000000000000000000000000000000",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[0]~DUPLICATE_q\,
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(1),
-	datad => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(2),
-	dataf => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(3),
-	combout => \Equal0~1_combout\);
-
--- Location: FF_X88_Y36_N26
-\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[8]\ : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita8~sumout\,
-	clrn => \ALT_INV_RESET~input_o\,
-	sclr => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_comb_bita9~1_sumout\,
-	ena => \b2v_inst78|LPM_COUNTER_component|auto_generated|_~0_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(8));
-
--- Location: LABCELL_X88_Y36_N42
-\Equal0~0\ : cyclonev_lcell_comb
--- Equation(s):
--- \Equal0~0_combout\ = ( !\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7) & ( (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(8) & (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9) & 
--- (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(6) & !\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5)))) ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "1000000000000000100000000000000000000000000000000000000000000000",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(8),
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(9),
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(6),
-	datad => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(5),
-	dataf => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(7),
-	combout => \Equal0~0_combout\);
-
--- Location: LABCELL_X88_Y36_N36
-\SOP_OUT~0\ : cyclonev_lcell_comb
--- Equation(s):
--- \SOP_OUT~0_combout\ = ( \Equal0~0_combout\ & ( (\Equal0~1_combout\ & (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4) & !\RESET~input_o\)) ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000000000000000000001000000010000000100000001000000",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \ALT_INV_Equal0~1_combout\,
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(4),
-	datac => \ALT_INV_RESET~input_o\,
-	dataf => \ALT_INV_Equal0~0_combout\,
-	combout => \SOP_OUT~0_combout\);
-
--- Location: LABCELL_X88_Y36_N48
-\Equal1~1\ : cyclonev_lcell_comb
--- Equation(s):
--- \Equal1~1_combout\ = ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(3) & ( (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[0]~DUPLICATE_q\ & (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(1) & 
--- \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(2))) ) )
-
--- pragma translate_off
-GENERIC MAP (
-	extended_lut => "off",
-	lut_mask => "0000000000000000000000000000000000000001000000010000000100000001",
-	shared_arith => "off")
--- pragma translate_on
-PORT MAP (
-	dataa => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[0]~DUPLICATE_q\,
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(1),
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(2),
-	dataf => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(3),
-	combout => \Equal1~1_combout\);
-
--- Location: LABCELL_X88_Y36_N45
+-- Location: MLABCELL_X87_Y34_N42
 \Equal1~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \Equal1~0_combout\ = ( \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(7) & ( (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(8) & (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(9) & 
--- (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(5) & \b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit[6]~DUPLICATE_q\))) ) )
+-- \Equal1~0_combout\ = ( cnt(2) & ( (cnt(3) & (cnt(4) & (cnt(0) & cnt(1)))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1028,70 +412,851 @@ GENERIC MAP (
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(8),
-	datab => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(9),
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(5),
-	datad => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit[6]~DUPLICATE_q\,
-	dataf => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(7),
+	dataa => ALT_INV_cnt(3),
+	datab => ALT_INV_cnt(4),
+	datac => ALT_INV_cnt(0),
+	datad => ALT_INV_cnt(1),
+	dataf => ALT_INV_cnt(2),
 	combout => \Equal1~0_combout\);
 
--- Location: LABCELL_X88_Y36_N54
+-- Location: MLABCELL_X87_Y34_N39
+\Equal1~2\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Equal1~2_combout\ = ( cnt(5) & ( (\Equal1~1_combout\ & \Equal1~0_combout\) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000000000101000001010000010100000101",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_Equal1~1_combout\,
+	datac => \ALT_INV_Equal1~0_combout\,
+	dataf => ALT_INV_cnt(5),
+	combout => \Equal1~2_combout\);
+
+-- Location: FF_X87_Y34_N2
+\cnt[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~1_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(0));
+
+-- Location: MLABCELL_X87_Y34_N3
+\Add0~5\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~5_sumout\ = SUM(( cnt(1) ) + ( GND ) + ( \Add0~2\ ))
+-- \Add0~6\ = CARRY(( cnt(1) ) + ( GND ) + ( \Add0~2\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(1),
+	cin => \Add0~2\,
+	sumout => \Add0~5_sumout\,
+	cout => \Add0~6\);
+
+-- Location: FF_X87_Y34_N5
+\cnt[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~5_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(1));
+
+-- Location: MLABCELL_X87_Y34_N6
+\Add0~9\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~9_sumout\ = SUM(( cnt(2) ) + ( GND ) + ( \Add0~6\ ))
+-- \Add0~10\ = CARRY(( cnt(2) ) + ( GND ) + ( \Add0~6\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(2),
+	cin => \Add0~6\,
+	sumout => \Add0~9_sumout\,
+	cout => \Add0~10\);
+
+-- Location: FF_X87_Y34_N8
+\cnt[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~9_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(2));
+
+-- Location: MLABCELL_X87_Y34_N9
+\Add0~13\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~13_sumout\ = SUM(( cnt(3) ) + ( GND ) + ( \Add0~10\ ))
+-- \Add0~14\ = CARRY(( cnt(3) ) + ( GND ) + ( \Add0~10\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(3),
+	cin => \Add0~10\,
+	sumout => \Add0~13_sumout\,
+	cout => \Add0~14\);
+
+-- Location: FF_X87_Y34_N10
+\cnt[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~13_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(3));
+
+-- Location: MLABCELL_X87_Y34_N12
+\Add0~17\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~17_sumout\ = SUM(( cnt(4) ) + ( GND ) + ( \Add0~14\ ))
+-- \Add0~18\ = CARRY(( cnt(4) ) + ( GND ) + ( \Add0~14\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(4),
+	cin => \Add0~14\,
+	sumout => \Add0~17_sumout\,
+	cout => \Add0~18\);
+
+-- Location: FF_X87_Y34_N13
+\cnt[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~17_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(4));
+
+-- Location: MLABCELL_X87_Y34_N15
+\Add0~21\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~21_sumout\ = SUM(( cnt(5) ) + ( GND ) + ( \Add0~18\ ))
+-- \Add0~22\ = CARRY(( cnt(5) ) + ( GND ) + ( \Add0~18\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(5),
+	cin => \Add0~18\,
+	sumout => \Add0~21_sumout\,
+	cout => \Add0~22\);
+
+-- Location: FF_X87_Y34_N17
+\cnt[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~21_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(5));
+
+-- Location: MLABCELL_X87_Y34_N18
+\Add0~25\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~25_sumout\ = SUM(( cnt(6) ) + ( GND ) + ( \Add0~22\ ))
+-- \Add0~26\ = CARRY(( cnt(6) ) + ( GND ) + ( \Add0~22\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(6),
+	cin => \Add0~22\,
+	sumout => \Add0~25_sumout\,
+	cout => \Add0~26\);
+
+-- Location: FF_X87_Y34_N19
+\cnt[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~25_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(6));
+
+-- Location: MLABCELL_X87_Y34_N21
+\Add0~29\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~29_sumout\ = SUM(( cnt(7) ) + ( GND ) + ( \Add0~26\ ))
+-- \Add0~30\ = CARRY(( cnt(7) ) + ( GND ) + ( \Add0~26\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(7),
+	cin => \Add0~26\,
+	sumout => \Add0~29_sumout\,
+	cout => \Add0~30\);
+
+-- Location: FF_X87_Y34_N23
+\cnt[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~29_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(7));
+
+-- Location: MLABCELL_X87_Y34_N24
+\Add0~33\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~33_sumout\ = SUM(( cnt(8) ) + ( GND ) + ( \Add0~30\ ))
+-- \Add0~34\ = CARRY(( cnt(8) ) + ( GND ) + ( \Add0~30\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(8),
+	cin => \Add0~30\,
+	sumout => \Add0~33_sumout\,
+	cout => \Add0~34\);
+
+-- Location: FF_X87_Y34_N25
+\cnt[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~33_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(8));
+
+-- Location: MLABCELL_X87_Y34_N27
+\Add0~37\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Add0~37_sumout\ = SUM(( cnt(9) ) + ( GND ) + ( \Add0~34\ ))
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111100000000000000000000000011111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datad => ALT_INV_cnt(9),
+	cin => \Add0~34\,
+	sumout => \Add0~37_sumout\);
+
+-- Location: FF_X87_Y34_N28
+\cnt[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~37_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => cnt(9));
+
+-- Location: MLABCELL_X87_Y34_N36
+\Equal1~1\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Equal1~1_combout\ = ( cnt(9) & ( (cnt(8) & (cnt(6) & cnt(7))) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000000000000000000110000000000000011",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datab => ALT_INV_cnt(8),
+	datac => ALT_INV_cnt(6),
+	datad => ALT_INV_cnt(7),
+	dataf => ALT_INV_cnt(9),
+	combout => \Equal1~1_combout\);
+
+-- Location: IOIBUF_X89_Y36_N55
+\TRIGGER_IN~input\ : cyclonev_io_ibuf
+-- pragma translate_off
+GENERIC MAP (
+	bus_hold => "false",
+	simulate_z_as => "z")
+-- pragma translate_on
+PORT MAP (
+	i => ww_TRIGGER_IN,
+	o => \TRIGGER_IN~input_o\);
+
+-- Location: LABCELL_X88_Y36_N6
+\dff0~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \dff0~feeder_combout\ = VCC
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "1111111111111111111111111111111111111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	combout => \dff0~feeder_combout\);
+
+-- Location: LABCELL_X88_Y36_N30
+\process_2~0\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \process_2~0_combout\ = ( \dff1~q\ & ( \RESET~input_o\ ) ) # ( !\dff1~q\ & ( \RESET~input_o\ ) ) # ( \dff1~q\ & ( !\RESET~input_o\ ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000111111111111111111111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	datae => \ALT_INV_dff1~q\,
+	dataf => \ALT_INV_RESET~input_o\,
+	combout => \process_2~0_combout\);
+
+-- Location: FF_X88_Y36_N8
+dff0 : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \TRIGGER_IN~input_o\,
+	d => \dff0~feeder_combout\,
+	clrn => \ALT_INV_process_2~0_combout\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dff0~q\);
+
+-- Location: FF_X88_Y36_N31
+dff1 : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => \dff0~q\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \dff1~q\);
+
+-- Location: MLABCELL_X87_Y34_N51
+\cnt_ena_ff~0\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \cnt_ena_ff~0_combout\ = ( \dff1~q\ ) # ( !\dff1~q\ & ( (\cnt_ena_ff~q\ & ((!\Equal1~1_combout\) # ((!cnt(5)) # (!\Equal1~0_combout\)))) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000011111110000000001111111011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_Equal1~1_combout\,
+	datab => ALT_INV_cnt(5),
+	datac => \ALT_INV_Equal1~0_combout\,
+	datad => \ALT_INV_cnt_ena_ff~q\,
+	dataf => \ALT_INV_dff1~q\,
+	combout => \cnt_ena_ff~0_combout\);
+
+-- Location: FF_X87_Y34_N53
+cnt_ena_ff : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \cnt_ena_ff~0_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \cnt_ena_ff~q\);
+
+-- Location: MLABCELL_X87_Y34_N30
+\cnt_ena_ffd~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \cnt_ena_ffd~feeder_combout\ = ( \cnt_ena_ff~q\ )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => \ALT_INV_cnt_ena_ff~q\,
+	combout => \cnt_ena_ffd~feeder_combout\);
+
+-- Location: FF_X87_Y34_N31
+cnt_ena_ffd : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \cnt_ena_ffd~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \cnt_ena_ffd~q\);
+
+-- Location: FF_X87_Y34_N40
+\Q_OUT_ff[0]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => cnt(0),
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(0));
+
+-- Location: FF_X87_Y34_N4
+\cnt[1]~DUPLICATE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~5_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \cnt[1]~DUPLICATE_q\);
+
+-- Location: LABCELL_X88_Y34_N3
+\Q_OUT_ff[1]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Q_OUT_ff[1]~feeder_combout\ = ( \cnt[1]~DUPLICATE_q\ )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => \ALT_INV_cnt[1]~DUPLICATE_q\,
+	combout => \Q_OUT_ff[1]~feeder_combout\);
+
+-- Location: FF_X88_Y34_N4
+\Q_OUT_ff[1]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Q_OUT_ff[1]~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(1));
+
+-- Location: FF_X87_Y34_N7
+\cnt[2]~DUPLICATE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~9_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \cnt[2]~DUPLICATE_q\);
+
+-- Location: FF_X88_Y34_N7
+\Q_OUT_ff[2]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => \cnt[2]~DUPLICATE_q\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(2));
+
+-- Location: LABCELL_X88_Y34_N15
+\Q_OUT_ff[3]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Q_OUT_ff[3]~feeder_combout\ = ( cnt(3) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => ALT_INV_cnt(3),
+	combout => \Q_OUT_ff[3]~feeder_combout\);
+
+-- Location: FF_X88_Y34_N16
+\Q_OUT_ff[3]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Q_OUT_ff[3]~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(3));
+
+-- Location: FF_X88_Y34_N19
+\Q_OUT_ff[4]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => cnt(4),
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(4));
+
+-- Location: MLABCELL_X87_Y34_N33
+\Q_OUT_ff[5]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Q_OUT_ff[5]~feeder_combout\ = ( cnt(5) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => ALT_INV_cnt(5),
+	combout => \Q_OUT_ff[5]~feeder_combout\);
+
+-- Location: FF_X87_Y34_N34
+\Q_OUT_ff[5]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Q_OUT_ff[5]~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(5));
+
+-- Location: LABCELL_X88_Y37_N3
+\Q_OUT_ff[6]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Q_OUT_ff[6]~feeder_combout\ = ( cnt(6) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => ALT_INV_cnt(6),
+	combout => \Q_OUT_ff[6]~feeder_combout\);
+
+-- Location: FF_X88_Y37_N4
+\Q_OUT_ff[6]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Q_OUT_ff[6]~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(6));
+
+-- Location: FF_X87_Y34_N22
+\cnt[7]~DUPLICATE\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Add0~29_sumout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sclr => \Equal1~2_combout\,
+	ena => \cnt_ena_ff~q\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \cnt[7]~DUPLICATE_q\);
+
+-- Location: FF_X88_Y34_N55
+\Q_OUT_ff[7]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => \cnt[7]~DUPLICATE_q\,
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(7));
+
+-- Location: LABCELL_X88_Y34_N33
+\Q_OUT_ff[8]~feeder\ : cyclonev_lcell_comb
+-- Equation(s):
+-- \Q_OUT_ff[8]~feeder_combout\ = ( cnt(8) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000011111111111111111111111111111111",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataf => ALT_INV_cnt(8),
+	combout => \Q_OUT_ff[8]~feeder_combout\);
+
+-- Location: FF_X88_Y34_N34
+\Q_OUT_ff[8]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \Q_OUT_ff[8]~feeder_combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(8));
+
+-- Location: FF_X88_Y34_N37
+\Q_OUT_ff[9]\ : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	asdata => cnt(9),
+	clrn => \ALT_INV_RESET~input_o\,
+	sload => VCC,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => Q_OUT_ff(9));
+
+-- Location: MLABCELL_X87_Y34_N57
 \SOP_OUT~1\ : cyclonev_lcell_comb
 -- Equation(s):
--- \SOP_OUT~1_combout\ = ( \Equal1~0_combout\ & ( \RESET~input_o\ ) ) # ( !\Equal1~0_combout\ & ( \RESET~input_o\ ) ) # ( \Equal1~0_combout\ & ( !\RESET~input_o\ & ( (!\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4) & (\Equal0~1_combout\ 
--- & (\Equal0~0_combout\))) # (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4) & (((\Equal1~1_combout\)))) ) ) ) # ( !\Equal1~0_combout\ & ( !\RESET~input_o\ & ( (\Equal0~1_combout\ & (\Equal0~0_combout\ & 
--- !\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4))) ) ) )
+-- \SOP_OUT~1_combout\ = ( !cnt(8) & ( (!cnt(7) & (!cnt(5) & !cnt(6))) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "0001000100000000000100010000111111111111111111111111111111111111",
+	lut_mask => "1010000000000000101000000000000000000000000000000000000000000000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_Equal0~1_combout\,
-	datab => \ALT_INV_Equal0~0_combout\,
-	datac => \ALT_INV_Equal1~1_combout\,
-	datad => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(4),
-	datae => \ALT_INV_Equal1~0_combout\,
-	dataf => \ALT_INV_RESET~input_o\,
+	dataa => ALT_INV_cnt(7),
+	datac => ALT_INV_cnt(5),
+	datad => ALT_INV_cnt(6),
+	dataf => ALT_INV_cnt(8),
 	combout => \SOP_OUT~1_combout\);
 
--- Location: FF_X88_Y36_N37
-SOP_OUT : dffeas
--- pragma translate_off
-GENERIC MAP (
-	is_wysiwyg => "true",
-	power_up => "low")
--- pragma translate_on
-PORT MAP (
-	clk => \CLK~inputCLKENA0_outclk\,
-	d => \SOP_OUT~0_combout\,
-	ena => \SOP_OUT~1_combout\,
-	devclrn => ww_devclrn,
-	devpor => ww_devpor,
-	q => \SOP_OUT~q\);
-
--- Location: LABCELL_X88_Y36_N39
-\EOP_OUT~0\ : cyclonev_lcell_comb
+-- Location: MLABCELL_X87_Y34_N54
+\SOP_OUT~0\ : cyclonev_lcell_comb
 -- Equation(s):
--- \EOP_OUT~0_combout\ = ( \Equal0~0_combout\ & ( (!\RESET~input_o\ & ((!\Equal0~1_combout\) # (\b2v_inst78|LPM_COUNTER_component|auto_generated|counter_reg_bit\(4)))) ) ) # ( !\Equal0~0_combout\ & ( !\RESET~input_o\ ) )
+-- \SOP_OUT~0_combout\ = ( !\cnt[1]~DUPLICATE_q\ & ( (!cnt(2) & (!cnt(0) & \cnt_ena_ff~q\)) ) )
 
 -- pragma translate_off
 GENERIC MAP (
 	extended_lut => "off",
-	lut_mask => "1111111100000000111111110000000010101111000000001010111100000000",
+	lut_mask => "0000000011000000000000001100000000000000000000000000000000000000",
 	shared_arith => "off")
 -- pragma translate_on
 PORT MAP (
-	dataa => \ALT_INV_Equal0~1_combout\,
-	datac => \b2v_inst78|LPM_COUNTER_component|auto_generated|ALT_INV_counter_reg_bit\(4),
-	datad => \ALT_INV_RESET~input_o\,
-	dataf => \ALT_INV_Equal0~0_combout\,
-	combout => \EOP_OUT~0_combout\);
+	datab => ALT_INV_cnt(2),
+	datac => ALT_INV_cnt(0),
+	datad => \ALT_INV_cnt_ena_ff~q\,
+	dataf => \ALT_INV_cnt[1]~DUPLICATE_q\,
+	combout => \SOP_OUT~0_combout\);
 
--- Location: FF_X88_Y36_N40
-EOP_OUT : dffeas
+-- Location: MLABCELL_X87_Y34_N45
+SOP_OUT : cyclonev_lcell_comb
+-- Equation(s):
+-- \SOP_OUT~combout\ = ( !cnt(9) & ( (!cnt(3) & (!cnt(4) & (\SOP_OUT~1_combout\ & \SOP_OUT~0_combout\))) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000001000000000000000100000000000000000000000000000000000",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => ALT_INV_cnt(3),
+	datab => ALT_INV_cnt(4),
+	datac => \ALT_INV_SOP_OUT~1_combout\,
+	datad => \ALT_INV_SOP_OUT~0_combout\,
+	dataf => ALT_INV_cnt(9),
+	combout => \SOP_OUT~combout\);
+
+-- Location: FF_X87_Y34_N46
+SOP_OUT_ff : dffeas
 -- pragma translate_off
 GENERIC MAP (
 	is_wysiwyg => "true",
@@ -1099,13 +1264,46 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	clk => \CLK~inputCLKENA0_outclk\,
-	d => \EOP_OUT~0_combout\,
-	ena => \SOP_OUT~1_combout\,
+	d => \SOP_OUT~combout\,
+	clrn => \ALT_INV_RESET~input_o\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	q => \EOP_OUT~q\);
+	q => \SOP_OUT_ff~q\);
 
--- Location: LABCELL_X43_Y3_N3
+-- Location: MLABCELL_X87_Y34_N48
+EOP_OUT : cyclonev_lcell_comb
+-- Equation(s):
+-- \EOP_OUT~combout\ = ( \cnt_ena_ff~q\ & ( (\Equal1~1_combout\ & (cnt(5) & \Equal1~0_combout\)) ) )
+
+-- pragma translate_off
+GENERIC MAP (
+	extended_lut => "off",
+	lut_mask => "0000000000000000000000000000000000000000000100010000000000010001",
+	shared_arith => "off")
+-- pragma translate_on
+PORT MAP (
+	dataa => \ALT_INV_Equal1~1_combout\,
+	datab => ALT_INV_cnt(5),
+	datad => \ALT_INV_Equal1~0_combout\,
+	dataf => \ALT_INV_cnt_ena_ff~q\,
+	combout => \EOP_OUT~combout\);
+
+-- Location: FF_X87_Y34_N49
+EOP_OUT_ff : dffeas
+-- pragma translate_off
+GENERIC MAP (
+	is_wysiwyg => "true",
+	power_up => "low")
+-- pragma translate_on
+PORT MAP (
+	clk => \CLK~inputCLKENA0_outclk\,
+	d => \EOP_OUT~combout\,
+	clrn => \ALT_INV_RESET~input_o\,
+	devclrn => ww_devclrn,
+	devpor => ww_devpor,
+	q => \EOP_OUT_ff~q\);
+
+-- Location: LABCELL_X83_Y4_N0
 \~QUARTUS_CREATED_GND~I\ : cyclonev_lcell_comb
 -- Equation(s):
 
