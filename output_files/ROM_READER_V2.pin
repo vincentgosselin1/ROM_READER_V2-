@@ -332,12 +332,12 @@ VCC                          : K13       : power  :                   : 1.1V    
 GND                          : K14       : gnd    :                   :         :           :                
 VCC                          : K15       : power  :                   : 1.1V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 7A        :                
-ROM_ADDR[8]                  : K17       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[4]                  : K17       : output : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K19       :        :                   :         : 7A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K20       :        :                   :         : 7A        :                
-SOP                          : K21       : output : 2.5 V             :         : 5B        : N              
-ROM_ADDR[7]                  : K22       : output : 2.5 V             :         : 5B        : N              
+EOP                          : K21       : output : 2.5 V             :         : 5B        : N              
+SOP                          : K22       : output : 2.5 V             :         : 5B        : N              
 GND                          : L1        :        :                   :         : B1L       :                
 GND                          : L2        :        :                   :         : B1L       :                
 GND                          : L3        : gnd    :                   :         :           :                
@@ -354,12 +354,12 @@ GND                          : L13       : gnd    :                   :         
 VCC                          : L14       : power  :                   : 1.1V    :           :                
 GND                          : L15       : gnd    :                   :         :           :                
 VCC                          : L16       : power  :                   : 1.1V    :           :                
-RESET                        : L17       : input  : 2.5 V             :         : 5B        : N              
-ROM_ADDR[2]                  : L18       : output : 2.5 V             :         : 5B        : N              
-EOP                          : L19       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[9]                  : L17       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[1]                  : L18       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[8]                  : L19       : output : 2.5 V             :         : 5B        : N              
 VREFB5BN0                    : L20       : power  :                   :         : 5B        :                
 GND                          : L21       : gnd    :                   :         :           :                
-ROM_ADDR[4]                  : L22       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[2]                  : L22       : output : 2.5 V             :         : 5B        : N              
 GND                          : M1        : gnd    :                   :         :           :                
 GND                          : M2        : gnd    :                   :         :           :                
 VCCH_GXBL                    : M3        : power  :                   : 2.5V    :           :                
@@ -377,11 +377,11 @@ GND                          : M14       : gnd    :                   :         
 VCC                          : M15       : power  :                   : 1.1V    :           :                
 CLK                          : M16       : input  : 2.5 V             :         : 5B        : N              
 VCCPD5B                      : M17       : power  :                   : 2.5V    : 5B        :                
-READ_ENA                     : M18       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[7]                  : M18       : output : 2.5 V             :         : 5B        : N              
 VCCIO5B                      : M19       : power  :                   : 2.5V    : 5B        :                
-ROM_ADDR[9]                  : M20       : output : 2.5 V             :         : 5B        : N              
-ROM_ADDR[1]                  : M21       : output : 2.5 V             :         : 5B        : N              
-ROM_ADDR[6]                  : M22       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[0]                  : M20       : output : 2.5 V             :         : 5B        : N              
+RESET                        : M21       : input  : 2.5 V             :         : 5B        : N              
+ROM_ADDR[5]                  : M22       : output : 2.5 V             :         : 5B        : N              
 GXB_NC                       : N1        :        :                   :         : B0L       :                
 GXB_NC                       : N2        :        :                   :         : B0L       :                
 GND                          : N3        : gnd    :                   :         :           :                
@@ -397,12 +397,12 @@ VCC                          : N12       : power  :                   : 1.1V    
 GND                          : N13       : gnd    :                   :         :           :                
 VCC                          : N14       : power  :                   : 1.1V    :           :                
 GND                          : N15       : gnd    :                   :         :           :                
-ROM_ADDR[0]                  : N16       : output : 2.5 V             :         : 5B        : N              
+TRIGGER_IN                   : N16       : input  : 2.5 V             :         : 5B        : N              
 GND                          : N17       : gnd    :                   :         :           :                
 VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
 ROM_ADDR[3]                  : N19       : output : 2.5 V             :         : 5B        : N              
-ROM_ADDR[5]                  : N20       : output : 2.5 V             :         : 5B        : N              
-TRIGGER_IN                   : N21       : input  : 2.5 V             :         : 5B        : N              
+READ_ENA                     : N20       : output : 2.5 V             :         : 5B        : N              
+ROM_ADDR[6]                  : N21       : output : 2.5 V             :         : 5B        : N              
 GND                          : N22       : gnd    :                   :         :           :                
 GND                          : P1        : gnd    :                   :         :           :                
 GND                          : P2        : gnd    :                   :         :           :                

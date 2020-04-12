@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ROM_READER_V2
-Sun Mar 15 16:11:30 2020
+Sat Apr 11 22:56:44 2020
 Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Mar 15 16:11:30 2020       ;
+; Analysis & Synthesis Status     ; Successful - Sat Apr 11 22:56:44 2020       ;
 ; Quartus Prime Version           ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
 ; Revision Name                   ; ROM_READER_V2                               ;
 ; Top-level Entity Name           ; ROM_READER_V2                               ;
@@ -158,10 +158,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -170,6 +171,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                         ; Library ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
+; pulse_gen.vhd                    ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/pulse_gen.vhd     ;         ;
 ; ROM_READER_V2.vhd                ; yes             ; User VHDL File  ; C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd ;         ;
 +----------------------------------+-----------------+-----------------+----------------------------------------------------------------------+---------+
 
@@ -181,12 +183,12 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Estimate of Logic utilization (ALMs needed) ; 16        ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 19        ;
+; Combinational ALUT usage for logic          ; 18        ;
 ;     -- 7 input functions                    ; 0         ;
-;     -- 6 input functions                    ; 0         ;
-;     -- 5 input functions                    ; 3         ;
+;     -- 6 input functions                    ; 1         ;
+;     -- 5 input functions                    ; 2         ;
 ;     -- 4 input functions                    ; 4         ;
-;     -- <=3 input functions                  ; 12        ;
+;     -- <=3 input functions                  ; 11        ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 28        ;
 ;                                             ;           ;
@@ -195,19 +197,20 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 27        ;
-; Total fan-out                               ; 186       ;
-; Average fan-out                             ; 2.35      ;
+; Maximum fan-out                             ; 28        ;
+; Total fan-out                               ; 187       ;
+; Average fan-out                             ; 2.40      ;
 +---------------------------------------------+-----------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
-; |ROM_READER_V2             ; 19 (19)             ; 28 (28)                   ; 0                 ; 0          ; 16   ; 0            ; |ROM_READER_V2      ; ROM_READER_V2 ; work         ;
-+----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                  ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name             ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
+; |ROM_READER_V2             ; 18 (18)             ; 28 (26)                   ; 0                 ; 0          ; 16   ; 0            ; |ROM_READER_V2                  ; ROM_READER_V2 ; work         ;
+;    |pulse_gen:inst55|      ; 0 (0)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |ROM_READER_V2|pulse_gen:inst55 ; pulse_gen     ; work         ;
++----------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -219,7 +222,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Total registers                              ; 28    ;
 ; Number of registers using Synchronous Clear  ; 10    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 27    ;
+; Number of registers using Asynchronous Clear ; 28    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 10    ;
 ; Number of registers using Preset             ; 0     ;
@@ -232,17 +235,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 28                          ;
-;     CLR               ; 17                          ;
+;     CLR               ; 18                          ;
 ;     ENA CLR SCLR      ; 10                          ;
-;     plain             ; 1                           ;
-; arriav_lcell_comb     ; 19                          ;
+; arriav_lcell_comb     ; 18                          ;
 ;     arith             ; 10                          ;
 ;         1 data inputs ; 10                          ;
-;     normal            ; 9                           ;
-;         2 data inputs ; 1                           ;
+;     normal            ; 8                           ;
 ;         3 data inputs ; 1                           ;
 ;         4 data inputs ; 4                           ;
-;         5 data inputs ; 3                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 1                           ;
 ; boundary_port         ; 16                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
@@ -265,25 +267,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
-    Info: Processing started: Sun Mar 15 16:11:18 2020
+    Info: Processing started: Sat Apr 11 22:56:31 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ROM_READER_V2 -c ROM_READER_V2
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file pulse_gen.vhd
+    Info (12022): Found design unit 1: pulse_gen-rtl File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/pulse_gen.vhd Line: 22
+    Info (12023): Found entity 1: pulse_gen File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/pulse_gen.vhd Line: 6
 Info (12021): Found 2 design units, including 1 entities, in source file rom_reader_v2.vhd
     Info (12022): Found design unit 1: ROM_READER_V2-rtl File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 26
     Info (12023): Found entity 1: ROM_READER_V2 File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 13
 Info (12127): Elaborating entity "ROM_READER_V2" for the top level hierarchy
+Info (12128): Elaborating entity "pulse_gen" for hierarchy "pulse_gen:inst55" File: C:/intelFPGA_lite/17.1/quartus/MyDev/ROM_READER_V2/ROM_READER_V2.vhd Line: 176
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 49 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 34 logic cells
+    Info (21061): Implemented 33 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4859 megabytes
-    Info: Processing ended: Sun Mar 15 16:11:30 2020
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4853 megabytes
+    Info: Processing ended: Sat Apr 11 22:56:44 2020
+    Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:26
 
 
